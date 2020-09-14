@@ -1,4 +1,4 @@
-alert("CONNECTED!");
+
 
 var colors = [
     "rgb(255, 0, 0)",
@@ -9,7 +9,7 @@ var colors = [
     "rgb(255, 0, 255)"
 ]
 var squares = document.querySelectorAll(".square");
-var pickedColor = colors[3];
+var pickedColor = pickColor();
 var colorDisplay = document.getElementById("colorDisplay");
 var messageDisplay = document.querySelector("#message");
 
@@ -41,6 +41,9 @@ function changeColors(color) {
     }
 }
 
-
+function pickColor() {
+    var random = Math.floor(Math.random() * colors.length);
+    return colors[random];
+}
 
 
