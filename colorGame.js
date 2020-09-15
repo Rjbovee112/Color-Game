@@ -11,12 +11,14 @@ var easyBtn = document.querySelector("#easyBtn");
 var hardBtn = document.querySelector("#hardBtn");
 
 easyBtn.addEventListener("click", function () {
-    alert("easy button clicked");
-})
+    hardBtn.classList.remove("selected");
+    easyBtn.classList.add("selected");
+});
 
 hardBtn.addEventListener("click", function () {
-    alert("hard button clicked");
-})
+    hardBtn.classList.add("selected");
+    easyBtn.classList.remove("selected");
+});
 
 resetButton.addEventListener("click", function () {
     //generate all new colors
